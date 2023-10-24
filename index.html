@@ -6,8 +6,7 @@
 	<title>Form Activity Solution File</title>
 	<meta name="description" content="An accessible form">
 	<meta name="author" content="Natalie Fraire">
-	<link rel="stylesheet" href="styles.css" />
-	<!---------- TO-DO: ADD LINK TO CSS HERE ---------->
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -32,17 +31,21 @@
 				skip links for your website. Forms can be a source of frustration for users, whether they specifically
 				need help with accessing your website or if they just prefer that your forms be easy to use and submit.
 				Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
-			<!---------- TO-DO: ADD FORM HERE ---------->
 			<form>
-				<label for="name">Full Name</label> <input type="text" name="name" id="name" autocomplete="name" aria-required="true">
-				<label for="email">Email</label> <input type="email"  name="email" id="email" autocomplete="email" aria-required="true">
-				<label for="phone">Phone</label> <input type="tel" name="tel" id="tel" autocomplete="tel" aria-required="true">
+				<label for="name">Full Name<span class="required">*</span></label>
+				<input type="text" name="name" id="name" autocomplete="name" aria-required="true">
+				<label for="email">Email<span class="required">*</span></label>
+				<input type="email"  name="email" id="email" autocomplete="email" aria-required="true">
+				<label for="phone">Phone<span class="required">*</span></label>
+				<input type="tel" name="phone" id="phone" autocomplete="tel" aria-required="true">
 				<fieldset>
-				<legend>Preferred method of contact.</legend> <input type="radio" name="preferredcontact" id="tel2" value="phone">
-				<label for="phone">Phone</label><input type="radio" name="preferredcontact" id="email2" value="email">
+				<legend>Preferred method of contact<span class="required">*</span></legend>
+				<input id="phone1" type="radio" name="preferredmethodofcontact" value="phone1">
+				<label for="phone">Phone</label>
+				<input type="radio" name="preferredmethodofcontact" id="email2" value="email2">
 				<label for="email">Email</label>
 				</fieldset>
-				<label for="city">State of residence.</label>
+				<label for="city">State of residence<span class="required">*</span></label>
 				<select id="city" name="select">
 				<option value="1">Alabama</option>
 				<option value="2">Alaska</option>
@@ -95,10 +98,9 @@
 				<option value="49">Wisconsin</option>
 				<option value="50">Wyoming</option>
 				</select>
-
-				
-
-
+				<label for="comment">Comments</label><br>
+				<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+				<input type="submit" name="submit" value="submit">
 			</form>
 		</article>
 	</main>
